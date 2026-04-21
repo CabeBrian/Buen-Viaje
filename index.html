@@ -184,11 +184,20 @@ Que tengas un buen viaje, una muy buena estadía y que empiece todo por que lo q
 </div>
 
 <script>
-document.body.addEventListener("click", () => {
+function mostrarMensaje() {
+    document.getElementById("mensajeFinal").style.display = "block";
+}
+
+function activarMusica() {
+    let musica = document.getElementById("musica");
+    musica.volume = 0.4;
+    musica.play();
+    document.body.addEventListener("click", () => {
     let musica = document.getElementById("musica");
     musica.volume = 0.4;
     musica.play();
 }, { once: true });
+}
 </script>
 
 </body>
